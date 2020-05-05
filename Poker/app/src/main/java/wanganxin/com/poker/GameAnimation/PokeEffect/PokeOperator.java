@@ -112,7 +112,7 @@ public class PokeOperator implements View.OnTouchListener {
             }
             try {
                 field = R.mipmap.class.getField("poke_" + Integer.toString(curPokeNum > 54 ? curPokeNum - 54 : curPokeNum));
-                id = field.getInt(new R.mipmap());
+                id = field.getInt(field);
             } catch (NoSuchFieldException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
@@ -143,7 +143,7 @@ public class PokeOperator implements View.OnTouchListener {
                 curPokeNum = game.cardpile.get(num).cardIndex;
             }
             field = R.mipmap.class.getField("converse_poke_" + Integer.toString(curPokeNum > 54 ? curPokeNum - 54 : curPokeNum));
-            id = field.getInt(new R.mipmap());
+            id = field.getInt(field);
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -165,7 +165,7 @@ public class PokeOperator implements View.OnTouchListener {
         int id = 0;
         try {
             field = R.mipmap.class.getField("poke_shadow_" + Integer.toString(num > 54 ? num - 54 : num));
-            id = field.getInt(new R.mipmap());
+            id = field.getInt(field);
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {

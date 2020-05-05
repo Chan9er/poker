@@ -62,7 +62,7 @@ public class BackgroundMusic {
         int id = 0;
         try {
             field = R.raw.class.getField("background" + Integer.toString(num + 1));
-            id = field.getInt(new R.raw());
+            id = field.getInt(field);
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {

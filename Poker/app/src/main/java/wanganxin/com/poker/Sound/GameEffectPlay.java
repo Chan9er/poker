@@ -103,37 +103,37 @@ public class GameEffectPlay {
                         if (k == 2 && j >= 14)
                             continue;
                         field = R.raw.class.getField(sex + style + size + "_0");
-                        id = field.getInt(new R.raw());
+                        id = field.getInt(field);
                         poolMap.put(sex + style + size + "_0", soundPool.load(context, id, 1));
                     }
                 }
 
                 for (int jj = 0; jj < outCardStyle.length; jj++) {
                     field = R.raw.class.getField(sex + outCardStyle[jj] + "_0");
-                    id = field.getInt(new R.raw());
+                    id = field.getInt(field);
                     poolMap.put(sex + outCardStyle[jj] + "_0", soundPool.load(context, id, 1));
                 }
 
                 for (int outcardnum = 0; outcardnum < 3; outcardnum++) {
                     field = R.raw.class.getField(sex + "outcard_" + Integer.toString(outcardnum));
-                    id = field.getInt(new R.raw());
+                    id = field.getInt(field);
                     poolMap.put(sex + "outcard_" + Integer.toString(outcardnum), soundPool.load(context, id, 1));
                 }
 
                 for (int roblandnum = 0; roblandnum < 3; roblandnum++) {
                     field = R.raw.class.getField(sex + "robland_" + Integer.toString(roblandnum));
-                    id = field.getInt(new R.raw());
+                    id = field.getInt(field);
                     poolMap.put(sex + "robland_" + Integer.toString(roblandnum), soundPool.load(context, id, 1));
                 }
 
                 for (int refusenum = 0; refusenum < 4; refusenum++) {
                     field = R.raw.class.getField(sex + "refuse_" + Integer.toString(refusenum));
-                    id = field.getInt(new R.raw());
+                    id = field.getInt(field);
                     poolMap.put(sex + "refuse_" + Integer.toString(refusenum), soundPool.load(context, id, 1));
                 }
 
                 field = R.raw.class.getField(sex + "brightcard");
-                id = field.getInt(new R.raw());
+                id = field.getInt(field);
                 poolMap.put(sex + "brightcard", soundPool.load(context, id, 1));
             }
 

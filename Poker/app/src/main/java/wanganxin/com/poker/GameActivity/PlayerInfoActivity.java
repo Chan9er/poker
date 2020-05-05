@@ -83,7 +83,7 @@ public class PlayerInfoActivity extends AppCompatActivity {
         int id = 0;
         try {
             field = R.mipmap.class.getField("man" + Integer.toString(curImageIndex));
-            id = field.getInt(new R.mipmap());
+            id = field.getInt(field);
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {

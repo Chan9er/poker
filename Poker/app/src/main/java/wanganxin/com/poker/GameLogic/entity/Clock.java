@@ -185,7 +185,7 @@ public class Clock {
                         Field field = R.mipmap.class.getField(
                                 (action == Constants.CALL_SCORE_CLOCK ? "clock_callscore_" : "clock_outcard_")
                                         + Integer.toString(clockTime));
-                        id = field.getInt(new R.mipmap());
+                        id = field.getInt(field);
                     } catch (NoSuchFieldException e) {
                         e.printStackTrace();
                     } catch (IllegalAccessException e) {

@@ -290,7 +290,7 @@ public class LandlordActivity extends AppCompatActivity {
                 int id = 0;
                 try {
                     field = R.id.class.getField(people[i] + "_" + Integer.toString(j + 1) + "_chat");
-                    id = field.getInt(new R.id());
+                    id = field.getInt(field);
                     fourchat[i + j * 4] = (TextView) findViewById(id);
                 } catch (NoSuchFieldException e) {
                     e.printStackTrace();
@@ -852,7 +852,7 @@ public class LandlordActivity extends AppCompatActivity {
                 id = R.mipmap.big_robot;
             } else {
                 field = R.mipmap.class.getField("man" + Integer.toString(image));
-                id = field.getInt(new R.mipmap());
+                id = field.getInt(field);
             }
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
